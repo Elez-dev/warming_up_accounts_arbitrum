@@ -124,7 +124,7 @@ def inch_swap_sell(privatekey, fromTokenAddress, to_symbol):
         token_balance = token.functions.balanceOf(address_wallet).call()
         amount = token_balance
         inch_swap_approve(privatekey, amount, fromTokenAddress, to_symbol)
-        time.sleep(random.randint(0.2, 1))
+        time.sleep(random.randint(10, 15))
         _1inchurl = f'https://api.1inch.io/v4.0/42161/swap?fromTokenAddress={fromTokenAddress}&toTokenAddress={to_token_address}&amount={amount}&fromAddress={address_wallet}&slippage=3'
         json_data = get_api_call_data(_1inchurl)
         nonce = web3.eth.getTransactionCount(address_wallet)
@@ -163,6 +163,6 @@ if __name__ == "__main__":
             from_token_address = swap['address']
             to_symbol = swap['symbol']
             inch_swap(privatekey, amount_to_swap, from_token_address, to_symbol)
-            time.sleep(random.randint(0.2, 1))
+            time.sleep(random.randint(20, 30))
             inch_swap_sell(privatekey, from_token_address, to_symbol)
-            time.sleep(random.randint(0.2, 1))
+            time.sleep(random.randint(20, 30))
