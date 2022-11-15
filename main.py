@@ -182,6 +182,7 @@ if __name__ == "__main__":
     cprint(f'\n============================================ Wiedzmin.eth =============================================',
            'cyan')
     cprint(f'\nSubscribe to us : https://t.me/developercode1', 'magenta')
+    cprint(f'\nПоддержи автора : 0xaC5d3F9f74c77821B624EC0830481E0608974fF7', 'magenta')
     with open("private_keys.txt", "r") as f:
         keys_list = [row.strip() for row in f]
     ChainUrl = "https://arb1.arbitrum.io/rpc"
