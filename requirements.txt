@@ -1,3 +1,0 @@
-requests==2.28.1
-web3==5.30.0
-termcolor==2.1.0
